@@ -1,0 +1,38 @@
+#
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+#
+
+if BOARD_CARPO_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Carpo"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+    default y
+
+endif # BOARD_CARPO_LEFT
+
+
+if BOARD_CARPO_LEFT || BOARD_CARPO_RIGHT
+
+config BOARD
+    default "carpo"
+
+config ZMK_SPLIT
+    default y
+
+config BT_CTLR
+    default BT
+
+if USB
+
+config USB_NRFX
+    default y
+
+config USB_DEVICE_STACK
+    default y
+
+endif # USB
+
+endif # BOARD_CARPO_LEFT || BOARD_CARPO_RIGHT

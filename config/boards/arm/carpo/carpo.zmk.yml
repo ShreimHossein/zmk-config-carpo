@@ -1,0 +1,15 @@
+file_format: "1"
+id: carpo
+name: carpo
+type: board
+arch: arm
+url: https://cassioavi.la/
+features:
+  - keys
+  - studio
+outputs:
+  - usb
+  - ble
+siblings:
+  - carpo_left
+  - carpo_right
