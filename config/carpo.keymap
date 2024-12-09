@@ -59,8 +59,8 @@
             quick-tap-ms = <175>;
             flavor = "balanced";
             hold-trigger-on-release;
-            hold-trigger-key-positions = <5>;
-            require-prior-idle-ms = <50>;
+            hold-trigger-key-positions = <5 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
+            require-prior-idle-ms = <25>;
         };
 
         hmr: hmr {
@@ -73,8 +73,8 @@
             quick-tap-ms = <175>;
             flavor = "balanced";
             hold-trigger-on-release;
-            hold-trigger-key-positions = <0>;
-            require-prior-idle-ms = <50>;
+            hold-trigger-key-positions = <0 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
+            require-prior-idle-ms = <25>;
         };
 
         a_acute: a_acute {
@@ -173,10 +173,10 @@
             bindings = <&mo>, <&kp>;
 
             tapping-term-ms = <280>;
-            hold-trigger-key-positions = <5>;
+            hold-trigger-key-positions = <5 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
             hold-trigger-on-release;
             quick-tap-ms = <125>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <25>;
             flavor = "balanced";
         };
 
@@ -189,9 +189,9 @@
             tapping-term-ms = <280>;
             hold-trigger-on-release;
             quick-tap-ms = <125>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <25>;
             flavor = "balanced";
-            hold-trigger-key-positions = <0>;
+            hold-trigger-key-positions = <0 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
         };
     };
 
@@ -200,64 +200,64 @@
 
         base_layer {
             bindings = <
-        &kp J         &kp C            &kp Y                &kp F         &kp K          &kp Z             &kp W         &kp U                 &key_repeat  &kp Q
-        &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_COMMAND T  &hml LSHFT H  &kp P          &kp M             &hmr RSHFT N  &hmr RIGHT_COMMAND I  &hmr LALT A  &hmr RCTRL O
-        &kp X         &kp V            &kp G                &lt 1 D       &kp B          &kp SINGLE_QUOTE  &lt 1 L       &kp COMMA             &kp DOT      &kp FSLH
-                                       &kp TAB              &thl 2 E      &thl 3 BSPC    &thr 4 RETURN     &thr 5 SPACE  &thr 6 ESCAPE
+  &kp J         &kp C            &kp Y                &kp F         &kp K          &kp Z             &kp W         &kp U                 &key_repeat  &kp Q
+  &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_COMMAND T  &hml LSHFT H  &kp P          &kp M             &hmr RSHFT N  &hmr RIGHT_COMMAND I  &hmr LALT A  &hmr RCTRL O
+  &kp X         &kp V            &kp G                &lt 1 D       &kp B          &kp SINGLE_QUOTE  &lt 1 L       &kp COMMA             &kp DOT      &kp FSLH
+                                 &kp TAB              &thl 2 E      &thl 3 BSPC    &thr 4 RETURN     &thr 5 SPACE  &thr 6 ESCAPE
             >;
         };
 
         accent_layer {
             bindings = <
-        &trans  &kp RA(C)  &trans  &trans    &trans    &trans  &trans  &u_acute  &a_tilde  &o_tilde
-        &trans  &trans     &trans  &trans    &trans    &trans  &trans  &i_acute  &a_acute  &o_acute
-        &trans  &trans     &trans  &e_circ   &trans    &trans  &trans  &a_grave  &a_circ   &o_circ
-                           &trans  &e_acute  &trans    &trans  &trans  &trans
+  &trans  &kp RA(C)  &trans  &trans    &trans    &trans  &trans  &u_acute  &a_tilde  &o_tilde
+  &trans  &trans     &trans  &trans    &trans    &trans  &trans  &i_acute  &a_acute  &o_acute
+  &trans  &trans     &trans  &e_circ   &trans    &trans  &trans  &a_grave  &a_circ   &o_circ
+                     &trans  &e_acute  &trans    &trans  &trans  &trans
             >;
         };
 
         nav_layer {
             bindings = <
-       &none      &none         &none             &none       &none    &none  &kp PG_UP  &kp HOME  &kp END  &none
-       &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LSHIFT  &none    &none  &kp LEFT   &kp DOWN  &kp UP   &kp RIGHT
-       &none      &none         &none             &none       &none    &none  &kp PG_DN  &none     &none    &none
-                                &none             &none       &none    &none  &kp PSCRN  &none
+  &none      &none         &none             &none       &none    &none  &kp PG_UP  &kp HOME  &kp END  &none
+  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LSHIFT  &none    &none  &kp LEFT   &kp DOWN  &kp UP   &kp RIGHT
+  &none      &none         &none             &none       &none    &none  &kp PG_DN  &none     &none    &none
+                           &none             &none       &none    &none  &kp PSCRN  &none
             >;
         };
 
         config_layer {
             bindings = <
-       &none      &none         &none             &none       &none    &none  &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_TOG  &bootloader
-       &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LSHIFT  &none    &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &sys_reset
-       &none      &none         &none             &none       &none    &none  &none         &none         &none         &none
-                                &none             &none       &none    &none  &none         &none
+  &none      &none         &none             &none       &none    &none  &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_TOG  &bootloader
+  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LSHIFT  &none    &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &sys_reset
+  &none      &none         &none             &none       &none    &none  &none         &none         &none         &none
+                           &none             &none       &none    &none  &none         &none
             >;
         };
 
         symbol_layer {
             bindings = <
-       &kp ASTRK  &kp AMPS   &kp LBRC  &kp RBRC    &kp CARET    &none  &none            &none              &none          &none
-       &kp SEMI   &kp AT     &kp LPAR  &kp RPAR    &kp GRAVE    &none  &kp RIGHT_SHIFT  &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RCTRL
-       &kp TILDE  &kp PRCNT  &kp LBKT  &kp RBKT    &kp PIPE     &none  &none            &none              &none          &none
-                             &kp HASH  &kp DOLLAR  &kp UNDER    &none  &none            &none
+  &kp ASTRK  &kp AMPS   &kp LBRC  &kp RBRC    &kp CARET    &none  &none            &none              &none          &none
+  &kp SEMI   &kp AT     &kp LPAR  &kp RPAR    &kp GRAVE    &none  &kp RIGHT_SHIFT  &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RCTRL
+  &kp TILDE  &kp PRCNT  &kp LBKT  &kp RBKT    &kp PIPE     &none  &none            &none              &none          &none
+                        &kp HASH  &kp DOLLAR  &kp UNDER    &none  &none            &none
             >;
         };
 
         number_layer {
             bindings = <
-       &kp EXCL   &kp N4  &kp N5   &kp N6  &kp COMMA    &none  &none            &none              &none     &none
-       &kp COLON  &kp N1  &kp N2   &kp N3  &kp EQUAL    &none  &kp RIGHT_SHIFT  &kp RIGHT_COMMAND  &kp LALT  &kp RCTRL
-       &kp PLUS   &kp N7  &kp N8   &kp N9  &kp BSLH     &none  &none            &none              &none     &none
-                          &kp DOT  &kp N0  &kp MINUS    &none  &none            &none
+  &kp EXCL   &kp N4  &kp N5   &kp N6  &kp COMMA    &none  &none            &none              &none     &none
+  &kp COLON  &kp N1  &kp N2   &kp N3  &kp EQUAL    &none  &kp RIGHT_SHIFT  &kp RIGHT_COMMAND  &kp LALT  &kp RCTRL
+  &kp PLUS   &kp N7  &kp N8   &kp N9  &kp BSLH     &none  &none            &none              &none     &none
+                     &kp DOT  &kp N0  &kp MINUS    &none  &none            &none
             >;
         };
 
         function_layer {
             bindings = <
-       &kp F10  &kp F4  &kp F5  &kp F6  &none      &none  &none            &none              &none     &none
-       &kp F11  &kp F1  &kp F2  &kp F3  &none      &none  &kp RIGHT_SHIFT  &kp RIGHT_COMMAND  &kp LALT  &kp RCTRL
-       &kp F12  &kp F7  &kp F8  &kp F9  &none      &none  &none            &none              &none     &none
-                        &none   &none   &kp DEL    &none  &none            &none
+  &kp F10  &kp F4  &kp F5  &kp F6  &none      &none  &none            &none              &none     &none
+  &kp F11  &kp F1  &kp F2  &kp F3  &none      &none  &kp RIGHT_SHIFT  &kp RIGHT_COMMAND  &kp LALT  &kp RCTRL
+  &kp F12  &kp F7  &kp F8  &kp F9  &none      &none  &none            &none              &none     &none
+                   &none   &none   &kp DEL    &none  &none            &none
             >;
         };
     };
