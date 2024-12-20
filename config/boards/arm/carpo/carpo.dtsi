@@ -9,7 +9,9 @@
 #include <nordic/nrf52840_qiaa.dtsi>
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/led/led.h>
 #include "carpo-layouts.dtsi"
+#include "carpo-pinctrl.dtsi"
 
 &physical_layout0 {
     transform = <&matrix_transform0>;
@@ -57,11 +59,30 @@
 
     leds {
         compatible = "gpio-leds";
-        blue_led: led_0 {
-            gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
+        led0_blue: led_0 {
+            gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
         };
     };
 
+    pwmleds {
+        compatible = "pwm-leds";
+        pwm_led0_blue:  pwm_led0 {
+            pwms = <&pwm0 0 10000 PWM_POLARITY_NORMAL>;
+            label = "BLUE_PWM_LED_0";
+        };
+    };
+
+    aliases {
+        statusledpwm = &pwm_led0_blue;
+        statusledgpio = &led0_blue;
+    };
+};
+
+&pwm0 {
+    status = "okay";
+    pinctrl-0 = <&pwm0_default>;
+    pinctrl-1 = <&pwm0_sleep>;
+    pinctrl-names = "default", "sleep";
 };
 
 &adc {
