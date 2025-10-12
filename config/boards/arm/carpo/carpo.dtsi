@@ -56,33 +56,6 @@
         output-ohms = <2000000>;
         full-ohms = <(2000000 + 806000)>;
     };
-
-    leds {
-        compatible = "gpio-leds";
-        led0_blue: led_0 {
-            gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
-        };
-    };
-
-    pwmleds {
-        compatible = "pwm-leds";
-        pwm_led0_blue:  pwm_led0 {
-            pwms = <&pwm0 0 10000 PWM_POLARITY_NORMAL>;
-            label = "BLUE_PWM_LED_0";
-        };
-    };
-
-    aliases {
-        statusledpwm = &pwm_led0_blue;
-        statusledgpio = &led0_blue;
-    };
-};
-
-&pwm0 {
-    status = "okay";
-    pinctrl-0 = <&pwm0_default>;
-    pinctrl-1 = <&pwm0_sleep>;
-    pinctrl-names = "default", "sleep";
 };
 
 &adc {
