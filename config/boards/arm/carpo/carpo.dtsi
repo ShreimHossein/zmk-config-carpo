@@ -24,7 +24,6 @@
         zephyr,code-partition = &code_partition;
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
-        zmk,battery = &vbatt;
     };
 
     matrix_transform0: keymap_transform_0 {
@@ -50,12 +49,6 @@
         diode-direction = "col2row";
     };
 
-    vbatt: vbatt {
-        compatible = "zmk,battery-voltage-divider";
-        io-channels = <&adc 3>;
-        output-ohms = <2000000>;
-        full-ohms = <(2000000 + 806000)>;
-    };
 };
 
 &adc {
