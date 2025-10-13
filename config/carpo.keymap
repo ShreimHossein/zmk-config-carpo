@@ -32,9 +32,9 @@
 /* --- Row 4 --- */
 &kp CAPS  &kp Z   &kp X   &kp C   &kp V   &kp B   &kp ENTER     &kp FSLH &kp DOT &kp COMMA &kp M  &kp N              
 /* --- Row 5 (Thumb Cluster) --- */
-&none     &none   &none   &none   &kp LALT &kp SPACE &none   &none   &none   &none   &none   &kp ENTER
+&none     &none   &none   &none   &kp LALT &kp SPACE &kp N9  &kp N9  &kp N9  &kp N9   &kp ENTER   &kp ENTER
 /* --- Row 6 (Deep Thumb) --- */
-&none     &none   &none   &none   &mo 1   &kp LSHFT &none   &none   &none   &none   &none   &kp BACKSPACE
+&none     &none   &none   &none   &mo 1   &kp LSHFT &kp N9   &kp N9   &kp N9   &kp N9  &kp BACKSPACE   &kp BACKSPACE
             >;
         };
     };
