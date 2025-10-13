@@ -23,12 +23,12 @@
 // |  Z  |  X  |  C  |  V  |  B  | / |   | . |  N  |  M  |  ,  |  .  |  /  | ' |
 //                                  | GUI | LWR | SPC | ENT |   | ENT | RSE | ALT |
             bindings = <
-&kp ESC    &kp 1  &kp 2  &kp 3  &kp 4    &kp 5      &kp BACKSPACE &kp P     &kp O      &kp I      &kp 9     &kp 0
-&kp LCTRL  &kp Q  &kp W  &kp E  &kp R    &kp T      &kp DELETE    &kp SEMI  &kp L      &kp K      &kp U     &kp Y
-&kp LSHFT  &kp A  &kp S  &kp D  &kp F    &kp G      &kp ENTER     &kp FSLH  &kp DOT    &kp COMMA  &kp J     &kp H
-&kp CAPS   &kp Z  &kp X  &kp C  &kp V    &kp B      &kp LBRC      &kp RIGHT &kp LEFT   &kp LALT   &kp M     &kp N
-&none      &none  &none  &none  &kp LALT &kp SPACE  &kp none      &kp none  &kp none   &kp none   &kp none  &kp ENTER
-&none      &none  &none  &none  &mo 1    &kp LSHFT  &kp none      &kp none  &kp none   &kp none   &kp none  &kp BACKSPACE
+    &kp ESC   &kp 1 &kp 2 &kp 3 &kp 4 &kp 5 &kp BACKSPACE &kp P     &kp O    &kp I     &kp 9 &kp 0
+    &kp LCTRL &kp Q &kp W &kp E &kp R &kp T &kp DELETE    &kp SEMI  &kp L    &kp K     &kp U &kp Y
+    &kp LSHFT &kp A &kp S &kp D &kp F &kp G &kp ENTER     &kp FSLH  &kp DOT  &kp COMMA &kp J &kp H
+    &kp CAPS  &kp Z &kp X &kp C &kp V &kp B &kp LBRC      &kp RIGHT &kp LEFT &kp LALT  &kp M &kp N
+    &none &none &none &none &kp LALT &kp SPACE &none &none &none &none &none &kp ENTER
+    &none &none &none &none &mo 1    &kp LSHFT &none &none &none &none &none &kp BACKSPACE
             >;
         };
     };
