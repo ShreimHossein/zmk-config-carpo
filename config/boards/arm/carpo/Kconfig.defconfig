@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 #
 
-if BOARD_CARPO_RIGHT
+if BOARD_CARPO_LEFT
 
 config ZMK_KEYBOARD_NAME
     default "Carpo"
@@ -11,7 +11,7 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
 
-endif # BOARD_CARPO_RIGHT
+endif # BOARD_CARPO_LEFT
 
 
 if BOARD_CARPO_LEFT || BOARD_CARPO_RIGHT
